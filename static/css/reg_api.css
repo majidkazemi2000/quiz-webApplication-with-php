@@ -1,0 +1,244 @@
+*{
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+#sign_in_btn{
+    position: relative;
+    display: block;
+    height: 40px;
+    border: none;
+    background-color: #47d0a6;
+    font-family: "A Iranian Sans";
+    font-size: 15px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 1s ease;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+    color: black;
+}
+#sign_in_btn::before{
+    background-color: blue;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .5s ease;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
+#sign_in_btn:hover::before{
+    height: 550%;
+    width: 120%;
+}
+.input{
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    color: black;
+    font-size: 15px;
+    transition: all .3s ease-in-out;
+    border-right: solid 2px #1ed0bd;
+}
+.anim{
+    animation-timing-function: ease-in-out;
+    animation-name: shakee;
+    animation-duration: 500ms;
+}
+@keyframes shakee {
+    0%{transform: translateX(5px);}
+    20%{transform: translateX(0px);}
+    40%{transform: translateX(-5px);}
+    60%{transform: translateX(0px);}
+    80%{transform: translateX(5px);}
+    100%{transform: translateX(0px);}
+}
+.main_div{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to left,#696bd4,#6d88d4);
+}
+#register_content{
+    height: 500px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    transition: all .3s ease-in-out;
+    padding: 0;
+    border-radius: 10px;
+    background-image: url('../images/quiz_background.jpg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#page_frame{
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    border-radius: 50% 0 0 50%;
+    z-index: 3;
+    right: -100px;
+    top: 0;
+    transition: all .4s ease-in-out;
+    background: linear-gradient(to left,#0e7f0b,#2eae38);
+}
+.finger_div{
+    height: 500px;
+    background-color: white;
+    position: relative;
+}
+.finger_div img{
+    height: 250px;
+    width: 250px;
+    margin-top: 125px;
+    z-index: 4;
+    position: absolute;
+    transform: translateX(-25%);
+    transition: all .3s ease-in-out;
+}
+.finger_model{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #696bd4;
+    border-radius: 80% 0 0 80%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.succ{
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    display: none;
+}
+.succ p{
+    font-family: 'A Iranian Sans';
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 180px;
+}
+.succ img{
+    height: 80px;
+    width: 80px;
+    margin-top: 25px;
+}
+.main_select{
+    height: 50px;
+    margin-top: 50px;
+    padding: 0;
+}
+.main_select_2{
+    height: 50px;
+    padding: 0;
+}
+.select_content{
+    height: 50px;
+    width: 200px;
+    padding: 0;
+    position: relative;
+}
+#delimiter{
+    height: 40px;
+    margin-top: 5px;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+    width: 100px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+}
+#sign_in_lebel p,#sign_up_lebel p{
+    font-weight: bold;
+    font-family: 'A Iranian Sans';
+    font-size: 13px;
+    line-height: 40px;
+    color: black;
+}
+#sign_in_lebel,#sign_up_lebel{
+    margin-top: 5px;
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#sign_up_lebel{
+    left: 0;
+}
+.reg_div{
+    height: 300px;
+    margin-top: 50px;
+    display: none;
+}
+.reg_div_type_1{
+    height: 100px;
+    position: relative;
+}
+.reg_div_type_2{
+    height: 100px;
+}
+.reg_div_type_3{
+    height: 100px;
+    position: relative;
+    margin-top: 75px;
+}
+.div_input_type_1{
+    height: 40px;
+    width: 250px;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+    position: absolute;
+    border-radius: 10px;
+    right: 0;
+}
+.div_input_type_1 p{
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+    text-align: right;
+    line-height: 40px;
+}
+#sign_up{
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    color: black;
+    font-size: 15px;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+}
+#send_code{
+    margin-top: 25px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    color: black;
+    font-size: 15px;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+}

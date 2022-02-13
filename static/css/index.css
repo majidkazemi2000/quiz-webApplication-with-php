@@ -1,0 +1,396 @@
+*{
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    outline: none;
+}
+body{
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+}
+#info_lottery:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+}
+#info_place:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+}
+.match_item_right,.match_item_left{
+    height: 50px;
+    border-right: dashed 2px black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.match_item_left img,.match_item_right img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 0;
+}
+.match_item_p_right,.match_item_p_left{
+    display: inline-block;
+    display: inline-block;
+    line-height: 50px;
+    font-family: "A Iranian Sans";
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+.match_item_div{
+    height: 40px;
+}
+.match_item{
+    height: 40px;
+    background-color: #7ad474;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.3);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.match_item p{
+    line-height: 40px;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    color: white;
+}
+.match_item img{
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin-top: -4px;
+    margin-right: 5px;
+}
+#start{
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    line-height: 50px;
+    margin-top: 25px;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.4);
+    transition: all .3s ease-in-out;
+}
+#start:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.section_select{
+    height: 100px;
+    background-color: #696bd4;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    margin-top: -50px;
+}
+.section_select p{
+    line-height: 100px;
+    font-weight: bold;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    color: white;
+}
+#select_div{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: scroll;
+    z-index: 5002;
+    display: none;
+}
+#close_select{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: -20px;
+    left: 50px;
+    z-index: 50003;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+#close_select:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.1);
+}
+#page{
+    position: fixed;
+    background: linear-gradient(to left,#50a6bb,#7643bb,#bb50b3);
+    width: 0px;
+    height: 0px;
+    bottom: 0;
+    left: 50%;
+    transition: all .5s ease-in-out;
+    border-radius: 50%;
+    z-index: 5001;
+}
+#select_box{
+    height: auto;
+    margin-top: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    background-image: url('../images/reg_background_4.jpg');
+    background-size: cover;
+    padding-bottom: 50px;
+    position: relative;
+}
+#users{
+    width: 100px;
+    line-height: 40px;
+    font-size: 13px;
+    color: black;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+#bottom{
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: all .3s ease-in-out;
+    right: 100px;
+}
+#top{
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    transition: all .3s ease-in-out;
+    right: 100px;
+}
+#left{
+    width: 1px;
+    background-color: black;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+    top: 40px;
+}
+#right{
+    width: 1px;
+    background-color: black;
+    position: absolute;
+    right: -2px;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+    top: 40px;
+}
+.option_api_text{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    font-weight:bold;
+    font-size: 13px;
+    line-height: 50px;
+}
+.option_api_div{
+    height: 400px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    box-shadow: 0 8px 16px rgba(0,0,0,.2);
+    transition: all .3s ease-in-out;
+    padding: 0;
+}
+.option_api_div:hover{
+    background-color: #696bd4;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    transform: translateY(10px);
+}
+#go_to_login_div div a{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+}
+#go_to_login_div div p{
+    line-height: 150px;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+}
+#go_to_login_div div img{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+#go_to_login_div{
+    height: 0;
+    position: fixed;
+    bottom: -1px;
+    background: linear-gradient(to left,#50a6bb,#7643bb,#bb50b3);
+    z-index: 5;
+    transition: all .3s ease-in-out;
+    padding: 0;
+    box-shadow: 8px 8px 16px 8px rgba(0,0,0,.7);
+}
+#category_list{
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#developer p{
+    line-height: 50px;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+#developer{
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+#add{
+    height: auto;
+    background-image: url('../images/footer.png');
+    background-size: cover;
+}
+#add div{
+    height: auto;
+    padding-top: 150px;
+}
+#skin_place,#skin_lottery{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #696bd4;
+    display: none;
+}
+#header{
+    height: 650px;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+}
+#address,#phone{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+#address{
+    margin-top: 20px;
+}
+.head_text{
+    font-family: 'B Homa';
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    direction: rtl;
+}
+#api a{
+    background-color: #696bd4;
+    color: white;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    line-height: 50px;
+    padding: 20px 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.3);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+.price_request{
+    font-family: 'A Iranian Sans';
+    color: black;
+    font-size: 15px;
+    direction: rtl;
+    line-height: 100px;
+}
+.api_option{
+    height: 300px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: linear-gradient(145deg, #20dfca, #1bbbaa);
+}
+.about{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+#api{
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#match{
+    font-family: 'A Iranian Sans';
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background: #696bd4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px 0 50px 0;
+    margin-top: 20px;
+}
+#start_match,#go_to_register{
+    height: 50px;
+    margin-top: 15px;
+    line-height: 50px;
+    font-family: 'A Iranian Sans';
+    color: black;
+    font-size: 15px;
+    border-radius: 32px;
+    background: linear-gradient(145deg, #20dfca, #1bbbaa);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+    cursor: pointer;
+}
+#win{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-size: 20px;
+    font-weight: bold;
+}
+#reward{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+    border-bottom: solid 2px yellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#about{
+    height: auto;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+    padding: 0;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+#info_place,#info_lottery{
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+#header_content{
+    height: 500px;
+    margin-top: 100px;
+    padding: 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+}

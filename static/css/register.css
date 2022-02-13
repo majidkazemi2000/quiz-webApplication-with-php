@@ -1,0 +1,182 @@
+*{
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: black;
+}
+
+::-ms-input-placeholder {
+    color: black;
+}
+#sign_up_icon{
+    height: 50px;
+    width: 150px;
+    display: inline-block;
+    float:left;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    z-index: 4;
+}
+#sign_in_icon{
+    height: 50px;
+    width: 150px;
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+    z-index: 4;
+}
+#sign_in_icon p ,#sign_up_icon p{
+    line-height: 50px;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+#delimiter{
+    height: 50px;
+    width: 150px;
+    background-color: #7dffdd;
+    cursor: pointer;
+    position: absolute;
+    left: 170px;
+    transition: all .3s ease-in-out;
+}
+#login,#sign_up{
+    height: 40px;
+    width: 40px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    transform: rotate(180deg);
+}
+#login:hover,#sign_up:hover{
+    transform: translateX(-10px) rotate(180deg);
+}
+.main{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right,#7dffdd 50%,white 50%);
+}
+#register_content{
+    height: 500px;
+    padding: 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    position: relative;
+    overflow-y: hidden;
+    overflow-y: hidden;
+}
+#success_content,#success_content_login{
+   position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 50000;
+    background:linear-gradient(#0c7618,#13b725);
+    display: none;
+}
+#success_content img,#success_content_login img{
+    height: 200px;
+    width: 215px;
+    margin-top: 100px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+    padding: 0;
+}
+#success_content_login p,#success_content p{
+    height: 60px;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    line-height: 60px;
+    font-family: 'A Iranian Sans';
+    color: black;
+    margin-top: 25px;
+}
+#text{
+    color: white;
+    font-family: 'A Iranian Sans';
+    font-size: 18px;
+    margin-top: 130px;
+    transition: all .3s ease-in-out;
+    margin-bottom: 0px;
+}
+#img_left{
+    height: 500px;
+    padding: 0;
+    background-image: url('../images/reg_background_3.gif');
+    background-size: cover;
+}
+#img_left img{
+    height: 200px;
+    width: 200px;
+}
+#sign_in_icon,#sign_up_icon{
+    position: absolute;
+    left: 170px;
+    top: 0;
+    bottom: 0;
+}
+#sign_up_icon{
+    left: 0px;
+}
+#sign_div{
+    height: 50px;
+    width: 360px;
+    padding: 0;
+    position: relative;
+}
+#sign_in_div{
+    height: 400px;
+    padding: 0;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+#sign_up_div{
+    height: 400px;
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: none;
+}
+#username,#password,#name,#email,#phone,#pass{
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: solid 2px black;
+    width: 300px;
+    margin-top: 5px;
+    z-index: 5;
+    text-align: center;
+}
+#username_label,#password_label,#name_label,#email_label,#phone_label,#pass_label{
+    font-size: 13px;
+    color: black;
+    font-family: 'A Iranian Sans';
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    right: 0;
+    transition: all .2s ease-in-out;
+}
+#username_devider,#password_devider,#name_devider,#email_devider,#phone_devider,#pass_devider{
+    height: 2px;
+    position: absolute;
+    width: 0;
+    background-color: #696bd4;
+    bottom: 5px;
+    transition: all .5s ease-in-out;
+}

@@ -1,0 +1,316 @@
+.menu_item{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    margin-top: 5px;
+    color: black;
+    border-radius: 10px;
+    line-height: 50px;
+    font-family: 'A Iranian Sans';
+    display: inline-block;
+    z-index: 6;
+    cursor: pointer;
+}
+#delimiter{
+    position:absolute;
+    height: 50px;
+    margin-top: 5px;
+    background-color: #696bd4;
+    width: 150px;
+    border-radius: 10px;
+    left: 10px;
+    z-index: 5;
+    transition: all .3s ease-in-out;
+}
+.canvasjs-chart-credit{
+    display: none;
+}
+.user_page,.question_page,.lottery_page,.category_page{
+    display: inline-block;
+    padding: 7px 15px;
+    background-color: #696bd4;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    margin: 5px;
+}
+.user_page:hover,.question_page:hover,.lottery_page:hover,.category_page:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    background-color: lightgray;
+}
+#logout{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    font-family: 'A Iranian Sans';
+    line-height: 50px;
+    margin-top: 15px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+#logout:hover{
+    background-color: #ff2a31;
+    color: black;
+}
+.close_icon{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    border-radius: 10px;
+}
+.close_icon:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.3);
+}
+#search_user,#search_question_button,#add_question_button,#add_category_button,#lottery,#edit_question_button,#edit_category_button{
+    padding: 10px 30px;
+    font-weight: bold;
+    font-family: 'A Iranian Sans';
+    color: black;
+    border: none;
+    direction: rtl;
+    margin-top: 30px;
+    background-color: white;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+}
+#search_user:hover,#search_question_button:hover,#add_question_button:hover,#add_category_button:hover,#lottery:hover,#edit_question_button:hover,#edit_category_button:hover{
+    background-color: #696bd4;
+}
+#yes,#no{
+    padding: 5px 20px;
+    background-color: gray;
+    font-family: 'A Iranian Sans';
+    color: white;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+#yes:hover{
+    background-color: #4aa63d;
+}
+#no:hover{
+    background-color: #cc553c;
+}
+#confirm_text{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    color: black;
+    line-height: 100px;
+    display: inline-block;
+}
+.item_detail{
+    font-weight: bold;
+    font-family: 'A Iranian Sans';
+    color: black;
+    border: none;
+    outline: none;
+    height: auto;
+    margin-top: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+    direction: rtl;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+}
+#confirm_div{
+    height: 0px;
+    background-color: lightgray;
+    z-index: 5;
+    position: fixed;
+    bottom: -10px;
+}
+.name_for_category{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+}
+.number_for_category{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    direction: rtl;
+}
+.edit_category_icon,.delete_category_icon,.edit_question_icon,.delete_question_icon,.delete_user_icon,.detail_lottery_icon{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.detail_question_icon,.detail_user_icon{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.line{
+    height: 2px;
+    background: linear-gradient(to left,transparent,black,transparent);
+}
+.all_category_item{
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.all_category_item_div{
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+.all_category_item_div:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.section_category,.section_user,.section_lottery{
+    height: 50px;
+    padding: 0;
+    margin-top: 20px;
+}
+.div_number_category{
+    height: 50px;
+    padding: 0;
+}
+.question_item{
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.question_item_div{
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+.question_item_div:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+.question_number{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+}
+.question_number span{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #696bd4;
+}
+.question_level{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    direction: rtl;
+}
+.question_level span{
+    padding: 5px 10px;
+    background-color: #d44c51;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.user_item{
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.user_item_div{
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+.user_item_div:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+.coin_user,.heart_user{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+}
+.img_coin_user,.img_heart_user{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-top: -3px;
+    margin-right: 5px;
+}
+.sum_buy_user,.level_user{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    direction: rtl;
+}
+.level_user span{
+    padding: 5px 10px;
+    background-color: #696bd4;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.name_user{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.lottery_item{
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.lottery_item_div{
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+.lottery_item_div:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+.week_lottery,.time_lottery{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+}

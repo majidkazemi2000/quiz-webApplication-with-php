@@ -1,0 +1,59 @@
+*{
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#username,#password{
+    height: 40px;
+    border: none;
+    outline: none;
+    width: 250px;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    font-family: 'B Yekan';
+    transition: all .2s ease-in-out;
+}
+#username_label,#password_label{
+    width: 250px;
+    text-align: right;
+    height: 40px;
+    margin-top: 10px;
+    font-family: 'B Yekan';
+    line-height: 40px;
+    font-size: 15px;
+    display: none;
+    color: gray;
+}
+#username_devider,#password_devider{
+    height: 2px;
+    background-color: #696bd4;
+    width: 0px;
+    transition: all .2s ease-in-out;
+}
+#login{
+    height: 30px;
+    width: 30px;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+#login:hover{
+    transform: translateX(10px);
+}
+.anim{
+    animation-name: shakee;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes shakee {
+    0%{transform: translateX(5px);}
+    20%{transform: translateX(-5px);}
+    40%{transform: translateX(5px);}
+    60%{transform: translateX(-5px);}
+    80%{transform: translateX(5px);}
+    100%{transform: translateX(0px);}
+}

@@ -1,0 +1,499 @@
+*{
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    outline: none;
+}
+.help{
+    height: 100px;
+    background-color: #696bd4;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.help:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.3);
+    background-color: #4045d4;
+}
+.choose{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: "B Nazanin";
+    font-size: 19px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    z-index: 1;
+
+}
+.choose::before{
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: all .4s ease-out;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
+.choose:hover::before{
+    height: 450%;
+    width: 110%;
+}
+.add_coin:hover,.add_heart:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+#close_add_coin,#close_add_heart{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    border-radius: 10px;
+}
+#close_add_coin:hover,#close_add_heart:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.3);
+}
+.add_coin_item{
+    height: 80px;
+    background-color: #696bd4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    border: solid 2px transparent;
+}
+#retry_play,#update_level{
+    height: 50px;
+    width: 200px;
+    background-color: #696bd4;
+    color: black;
+    font-family: 'A Iranian Sans';
+    line-height: 50px;
+    margin-top: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+
+.anim{
+    animation-timing-function: ease-in-out;
+    animation-name: shakee;
+    animation-duration: 500ms;
+}
+
+.timer1{
+    width: 200px;
+    height: auto;
+    position:absolute;
+    margin: 0;
+    position: absolute;
+    top: 15%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#count_down{
+    position: fixed;
+    top: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 50000;
+    background-color: rgba(0,0,0,.98);
+}
+#count_down center p{
+    direction: rtl;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    font-family: 'A Iranian Sans';
+    background-color: #696bd4;
+    padding: 20px;
+    margin-top: 50px;
+    width: 250px;
+    text-align: center;
+}
+#fail_match{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(#ffaa34,#b32d27,#a11c20);
+    z-index: 5;
+    display: none;
+}
+#error_content{
+    height: 500px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    padding: 0;
+}
+#error_header{
+    height: 200px;
+    position: relative;
+    background-image: url('../images/error_background_2.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#error_text{
+    line-height: 100px;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    color: white;
+    direction: rtl;
+}
+#error_text span{
+    font-size: 20px;
+    color: black;
+}
+#success_match{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(#83ff86,#19b36d,#38ff99);
+    z-index: 5;
+    display: none;
+}
+#success_content{
+    height: 500px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    padding: 0;
+}
+#success_header{
+    height: 200px;
+    position: relative;
+    background-image: url('../images/success_background_6.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+#success_text{
+    line-height: 100px;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    color: white;
+    direction: rtl;
+}
+#success_text span{
+    font-size: 20px;
+    color: black;
+}
+#user_level_success{
+    line-height: 100px;
+    font-family: 'A Iranian Sans';
+    font-size: 20px;
+    color: black;
+    display: inline-block;
+    margin-right: 10px;
+}
+#level_img_success{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: -10px;
+}
+.user_place_success{
+    line-height: 100px;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    color: black;
+    display: inline-block;
+    margin-right: 10px;
+    border-bottom: solid 2px black;
+}
+.user_place_success span{
+    color: black;
+}
+.level_1{
+    background-color: green;
+}
+.level_1,.level_2,.level_3,.level_4{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: solid 2px #696bd4;
+    transition: all .3s ease-in-out;
+}
+.level_div{
+    height: 50px;
+    padding: 0;
+    margin-top: 25px;
+}
+.timer{
+    height: auto;
+    background: rgba(0,0,0,.9);
+    height: 100px;
+    width: 100px;
+    padding-top: 20px;
+    padding-left: 25px;
+    border-radius: 0 50px 0 0;
+}
+.timer_div{
+    height: 100px;
+    padding: 0;
+    position:fixed;
+    bottom: 0;
+    z-index: 4;
+    padding-top: 10px;
+}
+.help_1,.help_2,.help_3,.help_4{
+    height: auto;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: none;
+}
+.help_content{
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.help_text{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    color: black;
+    line-height: 50px;
+}
+.count_help{
+    height: 50px;
+}
+.count_help p{
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+}
+.count_help img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+    margin-left: 5px;
+}
+#content{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #696bd4;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+}
+#img_div{
+    height: 150px;
+}
+#img_div img{
+    height: 150px;
+    width: 180px;
+}
+#img_quiz{
+    height: 250px;
+    width: 250px;
+}
+.main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+}
+#quiz_content{
+    height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    margin-top: 50px;
+    padding: 0;
+    background-image: url('../images/quiz_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.user_name{
+    line-height: 80px;
+    font-weight: bold;
+    font-family: 'A Iranian Sans';
+    font-size: 15px;
+    color: black;
+    display: inline-block;
+    margin-right: 20px;
+}
+.user_img{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin-top: -5px;
+}
+.level_user,.coin_user,.heart_user{
+    display: inline-block;
+    line-height: 80px;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    color: black;
+}
+.add_coin,.add_heart{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    right: 10px;
+    transition: all .3s ease-in-out;
+}
+.user_heart_img,.user_coin_img{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-top: -5px;
+    margin-left: 10px;
+    position: relative;
+}
+.level_img{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+.choose_content{
+    height: auto;
+    padding: 0;
+    padding-bottom: 20px;
+    display: none;
+}
+.choose_sub{
+    padding: 0;
+}
+.choose_sub_2{
+    height: 50px;
+    margin-top: 10px;
+}
+.choose{
+    height: 50px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+    cursor: pointer;
+    padding: 0;
+}
+.choose p{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    line-height: 50px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.add_coin_item{
+    height: 80px;
+    background-color: #696bd4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    border: solid 2px transparent;
+}
+#add_coin_div,#add_heart_div{
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+    display: none;
+}
+.skin{
+    height: 500px;
+    background-image: url('../images/coin_background_1.jpg');
+    background-size: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.7);
+    position: absolute;
+    bottom: 0;
+}
+.add_coin_item p{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-weight: bold;
+    line-height: 80px;
+    color: black;
+    display: inline-block;
+}
+.add_coin_item img{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+#coin_price_div,#heart_price_div{
+    height: 0;
+    position:fixed;
+    bottom: 60px;
+    transition: all .3s ease-in-out;
+}
+#coin_price_div p,#heart_price_div p{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    color: black;
+    font-size: 13px;
+    line-height: 30px;
+    background: linear-gradient(to left,#47d0a6,#1ed0bd);
+}
+.buy_div{
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+}
+#buy_coin,#buy_heart{
+    height: 60px;
+    background-color: #696bd4;
+    cursor: pointer;
+}
+#buy_coin p,#buy_heart p{
+    direction: rtl;
+    font-family: 'A Iranian Sans';
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 60px;
+    display: inline-block;
+}
+#buy_coin img,#buy_heart img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+.add_coin{
+    right: 5px;
+}
+@keyframes shakee {
+    0%{transform: translateX(5px);}
+    20%{transform: translateX(0px);}
+    40%{transform: translateX(-5px);}
+    60%{transform: translateX(0px);}
+    80%{transform: translateX(5px);}
+    100%{transform: translateX(0px);}
+}
